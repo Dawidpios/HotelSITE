@@ -10,7 +10,6 @@ const MyProfil = () => {
   let Acc = localStorage.getItem("Acc");
   Acc = JSON.parse(Acc);
 
-
   const User = Acc.map((e, i) => {
     let user;
     if (e.logged) {
@@ -34,23 +33,22 @@ const MyProfil = () => {
     if(e.target.classList.contains('liDel')){
       let index = e.target.dataset.key
       document.querySelector(`li[data-key="${index}"]`).remove();
-   
+      res.splice(index,1)
+      localStorage.removeItem('Tablica');
+      localStorage.setItem('Tablica', JSON.stringify(res));
+      res = localStorage.getItem('Tablica')
+      res = JSON.parse(res);
+     
+     
+
+      
      }
+     
   }
-  const PickReservation = res.map((e)=>{
-    let pickedRes
-    if(e.logged){
-      
-      
-      pickedRes= e.reservation;
-    
-      pickedRes = pickedRes.map((e,i)=>{
-        return <LiRes data-key={i} key={i}>{[e]}<button className="liDel" data-key={i}>usun</button> </LiRes>});
-       
-        
-        
-  }
-  return pickedRes
+  
+  const PickReservation = res.map((e,i)=>{
+    return <LiRes data-key={i} key={i}>{[e]}<button className="liDel" data-key={i}>usun</button> </LiRes>;
+ 
   })
        
 

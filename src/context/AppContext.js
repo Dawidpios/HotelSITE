@@ -97,7 +97,7 @@ const AppProvider = ({ children }) => {
 
       localStorage.setItem(
         "Tablica",
-        JSON.stringify(Accounts)
+        JSON.stringify(Accounts[checkIsLogged].reservation)
       );
     } else {
       alert(
