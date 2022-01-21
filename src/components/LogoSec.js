@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import styled from "styled-components";
 import videoLogo from "../images/logoVideo.mp4";
+import LoginBackground from "../images/login.jpg"
 import { AppContext } from "../context/AppContext";
 
 
@@ -71,14 +72,25 @@ align-self:flex-start;
 const UserLogin = styled.div`
 width:75%;
 height:50%;
-border:1px solid black;
+
 border-radius:5%;
 position:fixed;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-background-image: linear-gradient(to left bottom, #97adce, #96bece, #a9ccca, #c4d6cb, #dde0d6);
+background:url(${LoginBackground});
+background-size:cover;
 z-index:7;
+@media(min-width:600px){
+  width:50%;
+}
+@media(min-width:990px){
+  width:40%;
+}
+@media(min-width:1200px){
+  width:30%;
+  
+}
 `
 
 
@@ -95,8 +107,29 @@ flex-wrap:wrap;
 const Input = styled.input`
 padding:5px;
 margin:20px;
-border:1px solid black;
+border:none;
+border-bottom:1px solid black;
+background-color:transparent;
 text-align:center;
+width:40%;
+font-size:1rem;
+&::placeholder {
+  width:100%;
+  font-size:1rem;
+    color: black;
+    @media(min-width:1200px){
+  font-size:1.5rem;
+  
+}
+  }
+  &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+@media(min-width:1200px){
+  font-size:1.8rem;
+  
+}
 `
 
 const ButtonLogin = styled.button`
@@ -104,6 +137,12 @@ padding:5px;
 margin:20px;
 border:1px solid black;
 text-align:center;
+width:40%;
+border:2px solid;
+background: linear-gradient(to right bottom, rgba(255,255,255, .5),rgba(255,255,255, .5));
+font-size:1.2rem;
+text-transform:uppercase;
+/* font-weight:700; */
 
 `
 
