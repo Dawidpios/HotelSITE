@@ -89,11 +89,13 @@ const MyProfilSection = styled.section`
 width:100vw;
 height:100vh;
 background:linear-gradient(to right bottom, rgba(255,255,255, .7), rgba(255,255,255, .7)) , url(${BackGround});
-background-size:100%;
+background-size:cover;
+
 
 `
 const UserSection = styled.section`
-
+display:flex;
+width:40%;
 
 `
 
@@ -103,13 +105,16 @@ const DivExit = styled.div`
   margin: 2.5rem;
   color: yellow;
   z-index: 3;
-  width:40%;
+  width:30%;
+ 
   display:flex;
-  flex-direction:row-reverse;
-  justify-content:space-around;
+  flex-direction:column-reverse;
+  align-items:space-around;
   .LINK {
+    color:black;
     text-decoration: none;
     font-size: 2.4rem;
+    margin-bottom:2rem;
     &:visited{
       color:black;
     }
@@ -123,6 +128,7 @@ const UlUser = styled.ul`
   width: 60%;
   height: 10%;
   display: flex;
+  flex-direction:column;
   justify-content: flex-start; ;
 `;
 
@@ -136,8 +142,10 @@ const ResSection = styled.section`
   position: absolute;
   top: 30%;
   left: 0;
-  width: 45%;
+  width: 65%;
   font-size:3.5rem;
+  height:70%;
+
 `;
 
 const H3 = styled.h3`
@@ -146,9 +154,8 @@ const H3 = styled.h3`
 `;
 const UlRezerwacja = styled.ul`
   position: relative;
-  top: 50%;
   margin: 5% 0 0 10%;
-  height: 10rem;
+  height: 70%;
   width: 100%;
   list-style: none;
 
