@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styled from "styled-components"
 import { BsGithub, BsFacebook } from 'react-icons/bs';
-import FooterBackground from "../images/footerBackground.jpg"
+
 
 const Foooter = () => {
 
@@ -38,8 +38,8 @@ const Foooter = () => {
         <h5>Strone napisał</h5>
         <h4>Dawid Pioś</h4>
         <DivFooterMeLinks>
-        <LinkIcon href="#"><BsGithub/></LinkIcon>
-        <LinkIcon href="#"><BsFacebook/></LinkIcon>
+        <LinkIcon href="https://github.com/Dawidpios"><BsGithub/></LinkIcon>
+        <LinkIcon href="https://www.facebook.com/dawid.pios.7"><BsFacebook/></LinkIcon>
         </DivFooterMeLinks>
         </DivFooterMe>
     </DivFooter>
@@ -56,8 +56,7 @@ display:flex;
 flex-direction:column;
 justify-content: flex-start;
 align-items:flex-start;
-background:linear-gradient(to right bottom, rgba(255,255,255, .4), rgba(255,255,255, .7)) ,url(${FooterBackground});
-background-size:cover;
+
 color:black;
 font-weight:700;
 
@@ -92,7 +91,7 @@ font-size:3.5rem;
 `
 const DivFooterMe = styled.ul`
 width:100%;
-height: 100%;
+
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -100,7 +99,7 @@ align-items: center;
 list-style:none;
 font-size:18px;
 letter-spacing:1.5px;
-margin-top:30px;
+/* margin-top:30px; */
 font-size:3rem;
 @media(min-width:600px){
     font-size:3rem;
@@ -108,7 +107,7 @@ font-size:3rem;
 
 `
 const DivFooterMeLinks = styled.ul`
-padding:20px;
+padding:1.5rem;
 display:flex;
 flex-direction:row;
 width:100%;

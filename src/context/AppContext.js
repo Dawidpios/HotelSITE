@@ -137,15 +137,11 @@ const AppProvider = ({ children }) => {
             if(e.logged){
               e.logged=true;
               setUserLogin(`${e.name} ${e.lastName}`);
-              console.log(`user login to ${userLogin}`)
               localStorage.setItem('UserIsLogged?', userLogin)
-              console.log(`user login to ${userLogin}`)
               setUserLoginCheck(!UserLoginCheck);
               setIncorrectPass(false);
             }
-          })
-          console.log(`user login to ${userLogin}`)
-          
+          })          
        
         } else {
           setIncorrectPass("Nieprawidłowy login lub hasło");
@@ -154,7 +150,6 @@ const AppProvider = ({ children }) => {
     } else {
       setIncorrectPass("Wypełnij wszystkie pola formularza");
     }
-    console.log(`user login to ${userLogin}`)
   };
   //
   // Wylogowanie użytkownika
@@ -165,6 +160,7 @@ const AppProvider = ({ children }) => {
      
 
         localStorage.removeItem("UserIsLogged?");
+        localStorage.removeItem("Tablica");
         e.logged = false;
        setUserLogin(false);
        

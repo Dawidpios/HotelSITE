@@ -1,16 +1,17 @@
 import React from "react";
-import "../styles/App.css";
-import MyProfil from "./MyProfil";
-import Home from "./Home";
-import history from "./history";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
+import MyProfil from "./MyProfil";
+import Home from "./Home";
+
 import AppProvider from "../context/AppContext";
+
+import "../styles/App.css";
 
 function App() {
   return (
     <AppProvider>
-      <Router history={history}>
+      <Router >
            
         <Routes>
         

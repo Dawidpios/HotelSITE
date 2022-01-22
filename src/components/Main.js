@@ -1,16 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { useState, useEffect } from "react";
-import { AiFillStar } from "react-icons/ai";
+import React, { useState, useEffect }  from "react";
 
-import Button from '@mui/material/Button';
 import Opinion from "./Opinion";
 
+import styled from "styled-components";
+import Button from '@mui/material/Button';
+import { AiFillStar } from "react-icons/ai";
 import { CircularProgressbar } from "react-circular-progressbar";
+import {buildStyles} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import {
-  buildStyles
-} from "react-circular-progressbar";
+
 
 
 

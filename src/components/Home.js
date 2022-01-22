@@ -7,10 +7,12 @@ import Navi from "./Navi";
 import Booking from "./Booking";
 import Footer from "./Footer";
 
+import AppProvider from "../context/AppContext";
+
 import styled from "styled-components";
 import { SRLWrapper } from "simple-react-lightbox";
 
-import AppProvider from "../context/AppContext";
+import FooterBackground from "../images/footerBackground.jpg"
 
 const Home = () => {
     return (  <AppProvider>  
@@ -60,7 +62,9 @@ const MainSection = styled.section`
 
 const FooterSection = styled.section`
   width: 100vw;
-  height: 50vh;
+  height: 70vh;
   background: black;
   color: white;
+  background:linear-gradient(to right bottom, rgba(255,255,255, .4), rgba(255,255,255, .7)) ,url(${FooterBackground});
+background-size:cover;
 `;

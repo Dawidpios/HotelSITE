@@ -1,7 +1,9 @@
 import React, {useState, useContext} from "react";
 import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
+
 import styled from "styled-components";
+
 import BackGround from "../images/MyProfilBackground.jpg"
 
 const MyProfil = () => {
@@ -55,8 +57,8 @@ const MyProfil = () => {
      
   }
   
-  const PickReservation = res.map((e,i)=>{
-    return <LiRes data-key={i} key={i}>{[e]}<button className="liDel" data-key={i}>usun</button> </LiRes>;
+  const PickReservation = res?.map((e,i)=>{
+    return <LiRes data-key={i} key={i}>{[e]}<ButtonDelete className="liDel" data-key={i}>Usuń</ButtonDelete> </LiRes>;
  
   })
        
@@ -156,3 +158,25 @@ const LiRes = styled.li`
   font-size: 20px;
 
 `;
+const ButtonDelete = styled.button`
+ margin-left:2rem;
+ display:inline-block;
+ padding:0.35em 1.2em;
+ border:.1rem solid #black;
+ border-radius:0.12rem;
+ text-decoration:none;
+ font-weight:700;
+ color:black;
+ text-align:center;
+ transition: all 0.2s;
+ background: white;
+}
+&:hover{
+ color:white;
+ background-color:black;
+cursor: pointer;
+
+}
+
+`;
+

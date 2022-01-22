@@ -1,9 +1,10 @@
 import React, {useContext} from 'react';
 import styled from "styled-components";
-import videoLogo from "../images/logoVideo.mp4";
-import LoginBackground from "../images/login.jpg"
+
 import { AppContext } from "../context/AppContext";
 
+import videoLogo from "../images/logoVideo.mp4";
+import LoginBackground from "../images/login.jpg"
 
 const LogoSec = () => {
   const {UserLoginCheck, handleUserLogin, IncorrectPasswordParagraph} = useContext(AppContext)

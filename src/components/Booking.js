@@ -1,16 +1,14 @@
 import React, {useContext} from "react";
 import styled from "styled-components";
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
 
 import { AppContext } from "../context/AppContext";
-
 
 import roomRes1 from "../images/roomReservation1.jpg";
 import roomRes2 from "../images/roomReservation2.jpg";
 import roomRes3 from "../images/roomReservation3.jpg";
 
-
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 
 const Booking = () => {
   const {handleButtonForm} = useContext(AppContext);
@@ -130,6 +128,7 @@ const FormBooking = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
  
 `;
 
@@ -137,6 +136,7 @@ const ReservationSection = styled.section`
   width: 100%;
   text-align: center; 
   font-size:2rem;
+  
   @media(min-width:600px){
     font-size:2rem;
   }
@@ -153,17 +153,18 @@ const RoomsSection = styled.section`
   display: flex;
   width: 100%;
   flex-direction: column;
-
+  
   align-items: center;
   
 
 `;
 
 const RoomsSectionLabel = styled.label`
+  position:relative;
   display: flex;
   flex-direction:column;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
   margin: 2.5rem;
   padding:2rem;
   @media(min-width:990px){
@@ -200,7 +201,7 @@ const RoomsSectionUl = styled.ul`
   font-weight:700;
   @media(min-width:600px){
     width:70%;
-    text-align:center;
+    text-align:justify;
     align-self:center;
   }
   @media(min-width:990px){
@@ -247,6 +248,17 @@ const RoomCounterParagraph = styled.p`
 `;
 
 const InputCheckbox = styled.input`
+position:absolute;
+right:0;
+bottom:0;
+width:5%;
+height: 5%;
+
+@media(min-width:600px){
+ 
+width:5%;
+height: 5%;
+}
 
 
 `;

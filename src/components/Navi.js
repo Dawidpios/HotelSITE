@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
-import {Link} from "react-router-dom"
 import { AppContext } from "../context/AppContext";
+import {Link} from "react-router-dom"
+
+import styled from "styled-components";
+
 import HomeIcon from "../images/home-icon.png"
 import AboutIcon from "../images/about.png"
 import BookingIcon from "../images/booking.png"
