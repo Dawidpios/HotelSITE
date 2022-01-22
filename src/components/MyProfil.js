@@ -67,7 +67,7 @@ const MyProfil = () => {
     <MyProfilSection>
       <UserSection>
         <DivExit>
-          <Link onClick={userLogOut} to="/" className="LINK">
+          <Link onClick={userLogOut} to="/HotelSITE" className="LINK">
             Wyloguj
           </Link>
           <Link onClick={handleBackToMainSite}to="/" className="LINK">
