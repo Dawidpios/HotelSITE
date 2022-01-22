@@ -70,7 +70,7 @@ const MyProfil = () => {
           <Link onClick={userLogOut} to="/HotelSITE" className="LINK">
             Wyloguj
           </Link>
-          <Link onClick={handleBackToMainSite}to="/HotelSITE" className="LINK">
+          <Link onClick={handleBackToMainSite} to="/HotelSITE/" className="LINK">
             Powrót do strony głównej
           </Link>
         </DivExit>
