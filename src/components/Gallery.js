@@ -16,18 +16,18 @@ const Gallery = () => {
 
     <RoomSection>
   
-        <DivImgRoom><Img src={HotelRoom1}></Img></DivImgRoom>
-        <DivImgRoom><Img src={HotelRoom2}></Img></DivImgRoom>
-        <DivImgRoom><Img src={HotelRoom3}></Img></DivImgRoom>
-        <DivImgRoom><Img src={HotelRoom4}></Img></DivImgRoom>
+        <DivImgRoom><Img src={HotelRoom1} alt="HotemRoomImage"></Img></DivImgRoom>
+        <DivImgRoom><Img src={HotelRoom2} alt="HotemRoomImage"></Img></DivImgRoom>
+        <DivImgRoom><Img src={HotelRoom3} alt="HotemRoomImage"></Img></DivImgRoom>
+        <DivImgRoom><Img src={HotelRoom4} alt="HotemRoomImage"></Img></DivImgRoom>
       
     </RoomSection>
     <ViewSection>
    
-        <DivImgView><Img src={HotelView1}></Img></DivImgView>
-        <DivImgView><Img src={HotelView2}></Img></DivImgView>
-        <DivImgView><Img src={HotelView3}></Img></DivImgView>
-        <DivImgView><Img src={HotelView4}></Img></DivImgView>
+        <DivImgView><Img src={HotelView1} alt="HotemViewImage"></Img></DivImgView>
+        <DivImgView><Img src={HotelView2} alt="HotemViewImage"></Img></DivImgView>
+        <DivImgView><Img src={HotelView3} alt="HotemViewImage"></Img></DivImgView>
+        <DivImgView><Img src={HotelView4} alt="HotemViewImage"></Img></DivImgView>
   
     </ViewSection>
     
@@ -106,8 +106,8 @@ flex-shrink:1;
 
 const DivImgRoom = styled.div`
 width:100%;
-height:250px;
-padding:20px;
+height:25rem;
+padding:2rem;
 
 
 
@@ -121,8 +121,8 @@ transition:.4s;
 `
 const DivImgView = styled.div`
 width:100%;
-height:250px;
-padding:20px;
+height:25rem;
+padding:2rem;
 
 
 transition:.4s;

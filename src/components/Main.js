@@ -173,20 +173,20 @@ const Main = () => {
 export default Main;
 
 const H2Main = styled.h2`
-  margin-top: 80px;
-  font-size: 25px;
+  margin-top: 8rem;
+  font-size: 2.5rem;
   text-align: center;
 `;
 
 const DivMain = styled.div`
   width: 80%;
   height: auto;
-  border: 1px solid black;
-  border-radius:5px;
+  border: .1rem solid black;
+  border-radius:.5rem;
   position: relative;
   left: 50%;
   transform: translate(-50%);
-  padding: 40px;
+  padding: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,9 +219,9 @@ const ParagraphMain = styled.p`
   width: 100%;
   text-align: justify;
   margin: 0 auto;
-  letter-spacing: 0.8px;
-  padding: 2px;
-  letter-spacing:1.5px;
+  letter-spacing: .08rem;
+  padding: .2rem;
+  letter-spacing:.15rem;
   font-size:1.2rem;
   @media(min-width:600px){
     font-size:1.4rem;
@@ -246,8 +246,7 @@ const Statistics = styled.section`
 
 const DivBar = styled.section`
   width: 40%;
-  
-  margin-top:10px;
+  margin-top:1rem;
   @media (min-width:600px){
     width:20%;
     align-self:center;
@@ -295,7 +294,7 @@ const ParagraphBar = styled.p`
   width: 100%;
   height: 100%;
   text-align: center;
-  margin-top:20px;
+  margin-top:2rem;
   
 `;
 

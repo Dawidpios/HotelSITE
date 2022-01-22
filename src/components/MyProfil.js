@@ -100,7 +100,7 @@ const UserSection = styled.section`
 const DivExit = styled.div`
   position: absolute;
   right: 0;
-  margin: 25px;
+  margin: 2.5rem;
   color: yellow;
   z-index: 3;
   width:40%;
@@ -109,7 +109,7 @@ const DivExit = styled.div`
   justify-content:space-around;
   .LINK {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 2.4rem;
     &:visited{
       color:black;
     }
@@ -128,8 +128,8 @@ const UlUser = styled.ul`
 
 const LiUser = styled.li`
   padding-left: 5rem;
-  margin-top: 25px;
-  font-size: 20px;
+  margin-top: 2.5rem;
+  font-size: 2rem;
 `;
 
 const ResSection = styled.section`
@@ -148,20 +148,20 @@ const UlRezerwacja = styled.ul`
   position: relative;
   top: 50%;
   margin: 5% 0 0 10%;
-  height: 100px;
+  height: 10rem;
   width: 100%;
   list-style: none;
 
 `;
 const LiRes = styled.li`
   margin-top: 5%;
-  font-size: 20px;
+  font-size: 2rem;
 
 `;
 const ButtonDelete = styled.button`
  margin-left:2rem;
  display:inline-block;
- padding:0.35em 1.2em;
+ padding:0.35rem 1.2rem;
  border:.1rem solid #black;
  border-radius:0.12rem;
  text-decoration:none;

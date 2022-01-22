@@ -14,7 +14,7 @@ const LogoSec = () => {
     return ( 
     <LogoSection>
     <Logo>
-      <Video  autoPlay loop muted src={videoLogo}></Video>
+      <Video  autoPlay loop muted src={videoLogo} alt="videoLogo"></Video>
       <H1Header>Hotel Caravaggio</H1Header>
     </Logo>
     {!UserLoginCheck ? <UserLogin> 
@@ -110,10 +110,10 @@ flex-wrap:wrap;
 `
 
 const Input = styled.input`
-padding:5px;
-margin:20px;
+padding:.5rem;
+margin:2rem;
 border:none;
-border-bottom:1px solid black;
+border-bottom:.1rem solid black;
 background-color:transparent;
 text-align:center;
 width:40%;
@@ -141,12 +141,12 @@ font-size:1.4rem;
 `
 
 const ButtonLogin = styled.button`
-padding:5px;
-margin:20px;
-border:1px solid black;
+padding:.5rem;
+margin:2rem;
+border:.1rem solid black;
 text-align:center;
 width:40%;
-border:2px solid;
+border:.2rem solid;
 background: linear-gradient(to right bottom, rgba(255,255,255, .5),rgba(255,255,255, .5));
 font-size:1.2rem;
 text-transform:uppercase;
@@ -157,7 +157,7 @@ text-transform:uppercase;
 const H1Header  = styled.h1`
 z-index:2;
 text-align:center;
-font-size:35px;
+font-size:3.5rem;
 color:white;
 position:absolute;
 top:50%;

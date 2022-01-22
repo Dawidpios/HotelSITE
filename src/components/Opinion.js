@@ -96,7 +96,7 @@ const UserInfoCity = styled.h5`
 
 const UserParagraph = styled.p`
   width: 80%;
-  margin: 5px;
+  margin: .5rem;
   text-align: justify;
   font-size:1.2rem;
   @media (min-width:600px){

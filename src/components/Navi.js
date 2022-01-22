@@ -19,10 +19,7 @@ const Navi = () => {
   //  }
     const handleNavBar =(e)=>{
     if(e.target.classList.contains('nav-link') || e.target.parentNode.classList.contains('nav-link')){
-    console.log(e.target.getAttribute('href'))
-    console.log(e.target)
     let atr = document.getElementById(`${e.target.getAttribute('href')}`);
-    console.log(atr)
     atr.scrollIntoView({
       behavior:'smooth',
       block: "start",

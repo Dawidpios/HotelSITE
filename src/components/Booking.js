@@ -40,7 +40,7 @@ const Booking = () => {
         </ReservationSection>
         <RoomsSection onClick={handleCheckRoom}>
           <RoomsSectionLabel >
-            <RoomsSectionImg src={roomRes1}></RoomsSectionImg>
+            <RoomsSectionImg src={roomRes1} alt="Room"></RoomsSectionImg>
             <RoomsSectionUl>
               <RoomsSectionLi>Pokój jednoosobowy</RoomsSectionLi>
               <RoomsSectionLi>Wi-Fi</RoomsSectionLi>
@@ -52,7 +52,7 @@ const Booking = () => {
           </RoomsSectionLabel>
 
           <RoomsSectionLabel >
-            <RoomsSectionImg src={roomRes2}></RoomsSectionImg>
+            <RoomsSectionImg src={roomRes2} alt="Room"></RoomsSectionImg>
             <RoomsSectionUl>
               <RoomsSectionLi>Pokój dwuosobowy</RoomsSectionLi>
               <RoomsSectionLi>Wi-Fi</RoomsSectionLi>
@@ -66,7 +66,7 @@ const Booking = () => {
           </RoomsSectionLabel>
 
           <RoomsSectionLabel >
-            <RoomsSectionImg src={roomRes3}></RoomsSectionImg>
+            <RoomsSectionImg src={roomRes3} alt="Room"></RoomsSectionImg>
             <RoomsSectionUl>
               <RoomsSectionLi>Pokój trzyosobowy</RoomsSectionLi>
               <RoomsSectionLi>Wi-Fi</RoomsSectionLi>
