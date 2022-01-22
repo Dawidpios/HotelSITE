@@ -54,7 +54,7 @@ const Navi = () => {
           ) : (
             <LiLogin>
               
-              <p><Link to="/HotelSITE/myprofil">Mój profil</Link></p>
+              <p><Link to="/myprofil">Mój profil</Link></p>
               <p onClick={userLogOut}>Wyloguj</p>
             </LiLogin>
           )}
