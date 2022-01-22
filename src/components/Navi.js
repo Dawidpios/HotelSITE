@@ -40,7 +40,7 @@ const Navi = () => {
             <Li onClick={handleShowLogin}>Zaloguj się</Li>
           ) : (
             <LiLogin>
-              <p><Link to="/HotelSITE/myprofil">Mój profil</Link></p>
+              <p><Link to="/myprofil">Mój profil</Link></p>
               <p onClick={userLogOut}>Wyloguj</p>
             </LiLogin>
           )}
@@ -54,7 +54,7 @@ const Navi = () => {
           ) : (
             <LiLogin>
               
-              <p><Link to="/HotelSITE/myprofil">Mój profil</Link></p>
+              <p><Link to="/myprofil">Mój profil</Link></p>
               <p onClick={userLogOut}>Wyloguj</p>
             </LiLogin>
           )}
