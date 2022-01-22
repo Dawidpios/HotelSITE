@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import styled from "styled-components"
 import { BsGithub, BsFacebook } from 'react-icons/bs';
-
+import FooterBackground from "../images/footerBackground.jpg"
 
 const Foooter = () => {
 
@@ -56,6 +56,10 @@ display:flex;
 flex-direction:column;
 justify-content: flex-start;
 align-items:flex-start;
+background:linear-gradient(to right bottom, rgba(255,255,255, .4), rgba(255,255,255, .7)) ,url(${FooterBackground});
+background-size:cover;
+color:black;
+font-weight:700;
 
 `
 const DivFooter = styled.div`
@@ -127,8 +131,11 @@ font-size:18px;
 const LinkIcon = styled.a`
 margin:4rem;
 color:red;
-transform: scale(5);
-@media(min-width:600px){
-    transform:scale(4.5);
-  }
+transform:scale(4.5);
+font-size:2rem;
+color:black;
+&:last-child{
+    color:blue;
+}
+
 `

@@ -8,7 +8,7 @@ const AppProvider = ({ children }) => {
   const [threePersonRoom, setThreePersonRoom] = useState(3);
   const [UserLoginCheck, setUserLoginCheck] = useState(true);
   const [IncorrectPasswordParagraph, setIncorrectPass] = useState(false);
-  const [userLogin, setUserLogin] = useState();
+  const [userLogin, setUserLogin] = useState(localStorage.getItem?.('UserIsLogged?'));
 
   // Użytkownicy
   const [Accounts] = useState([
@@ -52,7 +52,7 @@ const AppProvider = ({ children }) => {
         input = e.value;
         switch (e.value) {
           case "Pokój jednoosobowy": {
-            if(userLogin){
+            if(userLogin !==""){
             if (oneRoom > 0) {
               setOneRoom(oneRoom - 1);
             } else {
@@ -126,14 +126,27 @@ const AppProvider = ({ children }) => {
           e.password === InputLoginPass.value
         ) {
           e.logged = true;
-          console.log(InputLogin, InputLoginPass);
-          setUserLogin(`${e.name} ${e.lastName}`);
-          setUserLoginCheck(!UserLoginCheck);
-          setIncorrectPass(false);
           localStorage.setItem(
             "Acc",
             JSON.stringify(Accounts)
           );
+        
+          let LoggedUser = localStorage.getItem('Acc');
+          LoggedUser = JSON.parse(LoggedUser)
+          LoggedUser.filter(e=>{
+            if(e.logged){
+              e.logged=true;
+              setUserLogin(`${e.name} ${e.lastName}`);
+              console.log(`user login to ${userLogin}`)
+              localStorage.setItem('UserIsLogged?', userLogin)
+              console.log(`user login to ${userLogin}`)
+              setUserLoginCheck(!UserLoginCheck);
+              setIncorrectPass(false);
+            }
+          })
+          console.log(`user login to ${userLogin}`)
+          
+       
         } else {
           setIncorrectPass("Nieprawidłowy login lub hasło");
         }
@@ -141,16 +154,21 @@ const AppProvider = ({ children }) => {
     } else {
       setIncorrectPass("Wypełnij wszystkie pola formularza");
     }
+    console.log(`user login to ${userLogin}`)
   };
   //
   // Wylogowanie użytkownika
   //
   const userLogOut = () => {
+
     Accounts.filter((e) => {
-     if (e.logged) {
+     
+
+        localStorage.removeItem("UserIsLogged?");
         e.logged = false;
        setUserLogin(false);
-      }
+       
+      
     });
   };
 

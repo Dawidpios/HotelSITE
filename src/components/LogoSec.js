@@ -81,8 +81,12 @@ transform:translate(-50%,-50%);
 background:url(${LoginBackground});
 background-size:cover;
 z-index:7;
+font-weight:700;
+font-size:1.8rem;
 @media(min-width:600px){
   width:50%;
+  font-size:2rem;
+  
 }
 @media(min-width:990px){
   width:40%;
@@ -112,7 +116,7 @@ border-bottom:1px solid black;
 background-color:transparent;
 text-align:center;
 width:40%;
-font-size:1rem;
+font-size:1.4rem;
 &::placeholder {
   width:100%;
   font-size:1rem;
@@ -126,6 +130,9 @@ font-size:1rem;
         outline: none;
         box-shadow: none;
     }
+@media(min-width:600px){
+  font-size:1.6rem;
+}
 @media(min-width:1200px){
   font-size:1.8rem;
   

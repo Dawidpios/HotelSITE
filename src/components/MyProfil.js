@@ -1,15 +1,24 @@
-import React from "react";
+import React, {useState, useContext} from "react";
+import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import BackGround from "../images/MyProfilBackground.jpg"
 
 const MyProfil = () => {
+  const [DisplayRes, setDisplayRes] = useState(false);
+  const {userLogOut, userLogin} = useContext(AppContext);
 
  let res = localStorage.getItem("Tablica");
  res = JSON.parse(res);
   let Acc = localStorage.getItem("Acc");
   Acc = JSON.parse(Acc);
 
+  const handleDisplayRes =()=>{
+    setDisplayRes(!DisplayRes);
+  }
+  const handleBackToMainSite=()=>{
+    localStorage.setItem('UserLogged', userLogin)
+  }
   const User = Acc.map((e, i) => {
     let user;
     if (e.logged) {
@@ -17,7 +26,7 @@ const MyProfil = () => {
         <UlUser key={i}>
           <LiUser>{e.name}</LiUser>
           <LiUser>{e.lastName}</LiUser>
-          <LiUser>Rezerwacje</LiUser>
+          <LiUser onClick={handleDisplayRes} style={{cursor: "pointer"}}>Rezerwacje</LiUser>
         </UlUser>
       );
     }
@@ -53,24 +62,38 @@ const MyProfil = () => {
        
 
   return (
-    <>
-      <section>
+    <MyProfilSection>
+      <UserSection>
         <DivExit>
-          <Link to="/" className="LINK">
+          <Link onClick={userLogOut} to="/" className="LINK">
             Wyloguj
+          </Link>
+          <Link onClick={handleBackToMainSite}to="/" className="LINK">
+            Powrót do strony głównej
           </Link>
         </DivExit>
         {User}
-      </section>
-      <ResSection className="sectionRes">
+      </UserSection>
+     {DisplayRes && <ResSection className="sectionRes">
         <H3>Rezerwacje użytkownika</H3>
         <UlRezerwacja onClick={handleDeleteLi}>{PickReservation}</UlRezerwacja>
-      </ResSection>
-    </>
+      </ResSection>}
+    </MyProfilSection>
   );
 };
 
 export default MyProfil;
+const MyProfilSection = styled.section`
+width:100vw;
+height:100vh;
+background:linear-gradient(to right bottom, rgba(255,255,255, .7), rgba(255,255,255, .7)) , url(${BackGround});
+background-size:100%;
+
+`
+const UserSection = styled.section`
+
+
+`
 
 const DivExit = styled.div`
   position: absolute;
@@ -78,9 +101,16 @@ const DivExit = styled.div`
   margin: 25px;
   color: yellow;
   z-index: 3;
+  width:40%;
+  display:flex;
+  flex-direction:row-reverse;
+  justify-content:space-around;
   .LINK {
     text-decoration: none;
     font-size: 24px;
+    &:visited{
+      color:black;
+    }
   }
 `;
 const UlUser = styled.ul`
@@ -88,23 +118,24 @@ const UlUser = styled.ul`
   top: 0;
   left: 0;
   list-style: none;
-  width: 50%;
+  width: 60%;
   height: 10%;
   display: flex;
   justify-content: flex-start; ;
 `;
 
 const LiUser = styled.li`
-  padding-left: 50px;
+  padding-left: 5rem;
   margin-top: 25px;
   font-size: 20px;
 `;
 
 const ResSection = styled.section`
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 0;
   width: 45%;
+  font-size:3.5rem;
 `;
 
 const H3 = styled.h3`
@@ -118,8 +149,10 @@ const UlRezerwacja = styled.ul`
   height: 100px;
   width: 100%;
   list-style: none;
+
 `;
 const LiRes = styled.li`
   margin-top: 5%;
   font-size: 20px;
+
 `;
