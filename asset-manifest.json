@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HotelSITE/static/css/main.7290247c.css",
-    "main.js": "/HotelSITE/static/js/main.d9b39698.js",
+    "main.js": "/HotelSITE/static/js/main.cef6bb5d.js",
     "static/media/logoVideo.mp4": "/HotelSITE/static/media/logoVideo.c7252f52ab501c3b38db.mp4",
     "static/media/roomReservation1.jpg": "/HotelSITE/static/media/roomReservation1.f1cfe78a49539266f880.jpg",
     "static/media/login.jpg": "/HotelSITE/static/media/login.637db15c6104eeb6831e.jpg",
@@ -20,10 +20,10 @@
     "static/media/about.png": "/HotelSITE/static/media/about.f5e8d73a98d5c42ba4a6.png",
     "index.html": "/HotelSITE/index.html",
     "main.7290247c.css.map": "/HotelSITE/static/css/main.7290247c.css.map",
-    "main.d9b39698.js.map": "/HotelSITE/static/js/main.d9b39698.js.map"
+    "main.cef6bb5d.js.map": "/HotelSITE/static/js/main.cef6bb5d.js.map"
   },
   "entrypoints": [
     "static/css/main.7290247c.css",
-    "static/js/main.d9b39698.js"
+    "static/js/main.cef6bb5d.js"
   ]
 }
