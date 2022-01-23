@@ -6,7 +6,7 @@ import { AppContext } from "../context/AppContext";
 import videoLogo from "../images/logoVideo.mp4";
 
 import LoginBackground from "../images/login.jpg"
-import LogoAfter from "../images/logo.png"
+
 
 const LogoSec = () => {
   const {UserLoginCheck, handleUserLogin, IncorrectPasswordParagraph} = useContext(AppContext)
@@ -19,7 +19,7 @@ const LogoSec = () => {
       <Video  autoPlay loop muted src={videoLogo} alt="videoLogo"></Video>
       
       <H1Header>Hotel Caravaggio <br/> &#9734; &#9734; &#9734; &#9734; &#9734;</H1Header>
-     <DivImg> <ImgLogoAfter src={LogoAfter} alt="logo"/></DivImg>
+    
     </Logo>
     {!UserLoginCheck ? <UserLogin> 
       <FormLogin >
@@ -67,26 +67,7 @@ width:100%;
 height: 100%;
 align-self:flex-start;
 `
-const DivImg = styled.div`
-position:relative;
-top:0%;
-left:50%;
-transform: translate(-50%,-50%);
-width:100%;
-height:50%;`
 
-const ImgLogoAfter = styled.img`
-width:100%;
-height: 100%;
-
-
-@media (min-width:450px){
-  width:80%;
-}
-@media (min-width:600px){
-  display:none;
-}
-`
 
 
 const UserLogin = styled.div`
