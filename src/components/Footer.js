@@ -35,8 +35,8 @@ const Foooter = () => {
 
     <DivFooter>
         <DivFooterMe>
-        <h5>Strone napisał</h5>
-        <h4>Dawid Pioś</h4>
+        <FooterLi>Strone napisał</FooterLi>
+        <FooterLi>Dawid Pioś</FooterLi>
         <DivFooterMeLinks>
         <LinkIcon href="https://github.com/Dawidpios"><BsGithub/></LinkIcon>
         <LinkIcon href="https://www.facebook.com/dawid.pios.7"><BsFacebook/></LinkIcon>

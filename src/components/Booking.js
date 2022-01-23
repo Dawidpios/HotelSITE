@@ -31,12 +31,14 @@ const Booking = () => {
       <H1Booking>Zarezerwuj pobyt u nas!</H1Booking>
       <FormBooking>
         <ReservationSection>
-          <h3>Wybierz date pobytu</h3>
+          <p>Wybierz date pobytu</p>
           <br />
-          <ReservationLabel>Od</ReservationLabel>
+          <ReservationLabel>Od
           <input className="InputReservationDateFrom" type="date"></input>
-          <ReservationLabel>Do</ReservationLabel>
+          </ReservationLabel>
+          <ReservationLabel>Do
           <input className="InputReservationDateUntil" type="date"></input>
+          </ReservationLabel>
         </ReservationSection>
         <RoomsSection onClick={handleCheckRoom}>
           <RoomsSectionLabel >
@@ -143,10 +145,17 @@ const ReservationSection = styled.section`
   @media(min-width:990px){
     font-size:2.5rem;
   }
+  &>p{
+    font-size:1.6rem;
+    font-weight:700;
+  }
 `;
 
 const ReservationLabel = styled.label`
   margin: 1rem;
+  &>input{
+    margin:1rem;
+  }
 `;
 
 const RoomsSection = styled.section`

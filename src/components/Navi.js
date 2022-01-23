@@ -33,9 +33,9 @@ const Navi = () => {
     <>
       <Nav  >
         <Ulmobile onClick={handleNavBar} className="Nav-ul">
-        <Li className="nav-link" href="Home"><ImgMenu className="nav-link" href="Home" src={HomeIcon}/></Li>
-          <Li  className="nav-link" href="About-us"><ImgMenu className="nav-link" href="About-us" src={AboutIcon}/></Li>
-          <Li className="nav-link" href="Booking"><ImgMenu className="nav-link" href="Booking" src={BookingIcon}/></Li>
+        <Li className="nav-link" href="Home"><ImgMenu className="nav-link" href="Home" src={HomeIcon} alt="MenuIcon"/></Li>
+          <Li  className="nav-link" href="About-us"><ImgMenu className="nav-link" href="About-us" src={AboutIcon} alt="MenuIcon"/></Li>
+          <Li className="nav-link" href="Booking"><ImgMenu className="nav-link" href="Booking" src={BookingIcon} alt="MenuIcon"/></Li>
           {!userLogin ? (
             <Li onClick={handleShowLogin}>Zaloguj się</Li>
           ) : (

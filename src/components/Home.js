@@ -13,6 +13,7 @@ import styled from "styled-components";
 import { SRLWrapper } from "simple-react-lightbox";
 
 import FooterBackground from "../images/footerBackground.jpg"
+// import BackGround from "../images/background"
 
 const Home = () => {
     return (  <AppProvider>  
@@ -44,6 +45,9 @@ const AppSection = styled.section`
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  background-color: #7cc9f5;
+  
+  background-image: linear-gradient(to right bottom, rgba(255,255,255, .8), rgba(255,255,255, .7)), repeating-radial-gradient( circle at 0 0, transparent 0, #7cc9f5 6px ), repeating-linear-gradient( #9c82f655, #9c82f6 ) ;
 
 `;
 const MainSection = styled.section`
