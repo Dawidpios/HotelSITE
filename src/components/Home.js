@@ -47,7 +47,7 @@ const AppSection = styled.section`
   flex-wrap: nowrap;
   background-color: #7cc9f5;
   
-  background-image: linear-gradient(to right bottom, rgba(255,255,255, .8), rgba(255,255,255, .7)), repeating-radial-gradient( circle at 0 0, transparent 0, #7cc9f5 6px ), repeating-linear-gradient( #9c82f655, #9c82f6 ) ;
+  background-image: linear-gradient(to right bottom, rgba(255,255,255, .8), rgba(255,255,255, .8)), repeating-radial-gradient( circle at 0 0, transparent 0, #7cc9f5 6px ), repeating-linear-gradient( #9c82f655, #9c82f6 ) ;
 
 `;
 const MainSection = styled.section`
