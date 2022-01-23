@@ -47,12 +47,15 @@ const AppProvider = ({ children }) => {
     let Until = document.querySelector(".InputReservationDateUntil");
     let RoomSectionInput = document.querySelectorAll(".RoomSectionInput");
     let input;
+    let logCheck = localStorage.getItem('Login');
+    console.log(logCheck)
     RoomSectionInput.forEach((e) => {
       if (e.checked === true) {
         input = e.value;
+        
         switch (e.value) {
           case "Pokój jednoosobowy": {
-            if(userLogin !==""){
+            if(logCheck){
             if (oneRoom > 0) {
               setOneRoom(oneRoom - 1);
             } else {
@@ -63,7 +66,7 @@ const AppProvider = ({ children }) => {
             break;
           }
           case "Pokój dwuosobowy": {
-            if(userLogin){
+            if(logCheck){
             if (twoPersonRoom > 0) {
               setTwoPersonRoom(twoPersonRoom - 1);
             } else {
@@ -74,7 +77,7 @@ const AppProvider = ({ children }) => {
             break;
           }
           case "Pokój trzyosobowy": {
-            if(userLogin){
+            if(logCheck){
             if (threePersonRoom > 0 ) {
               setThreePersonRoom(threePersonRoom - 1);
             } else {
@@ -91,13 +94,13 @@ const AppProvider = ({ children }) => {
     });
     const res = `${from.value} - ${Until.value} ${input}`;
 
-    let checkIsLogged = Accounts.findIndex((x) => x.logged === true);
-    if (checkIsLogged >= 0 && from.value && Until.value) {
-      Accounts[checkIsLogged].reservation.push(res);
-
+    let AccIndex = Accounts.findIndex((checkIsLogged) => checkIsLogged);
+    if (logCheck && from.value && Until.value) {
+      console.log(AccIndex)
+      Accounts[AccIndex].reservation.push(res);
       localStorage.setItem(
         "Tablica",
-        JSON.stringify(Accounts[checkIsLogged].reservation)
+        JSON.stringify(Accounts[AccIndex].reservation)
       );
     } else {
       alert(
@@ -126,6 +129,7 @@ const AppProvider = ({ children }) => {
           e.password === InputLoginPass.value
         ) {
           e.logged = true;
+          localStorage.setItem('Login', e.login);
           localStorage.setItem(
             "Acc",
             JSON.stringify(Accounts)
@@ -135,8 +139,7 @@ const AppProvider = ({ children }) => {
           LoggedUser = JSON.parse(LoggedUser)
           LoggedUser.filter(e=>{
             if(e.logged){
-              e.logged=true;
-              setUserLogin(`${e.name} ${e.lastName}`);
+              setUserLogin(true);
               localStorage.setItem('UserIsLogged?', userLogin)
               setUserLoginCheck(!UserLoginCheck);
               setIncorrectPass(false);
@@ -157,12 +160,11 @@ const AppProvider = ({ children }) => {
   const userLogOut = () => {
 
     Accounts.filter((e) => {
-     
-
-        localStorage.removeItem("UserIsLogged?");
-        localStorage.removeItem("Tablica");
-        e.logged = false;
-       setUserLogin(false);
+      
+      localStorage.clear();
+      e.logged = false;
+      setUserLogin(false);
+    
        
       
     });

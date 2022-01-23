@@ -7,13 +7,15 @@ import styled from "styled-components";
 import BackGround from "../images/MyProfilBackground.jpg"
 
 const MyProfil = () => {
-  const [DisplayRes, setDisplayRes] = useState(false);
+  const [DisplayRes, setDisplayRes] = useState(true);
   const {userLogOut, userLogin} = useContext(AppContext);
 
- let res = localStorage.getItem("Tablica");
- res = JSON.parse(res);
+  let res = localStorage.getItem("Tablica");
+  res = JSON.parse(res);
   let Acc = localStorage.getItem("Acc");
   Acc = JSON.parse(Acc);
+
+  
 
   const handleDisplayRes =()=>{
     setDisplayRes(!DisplayRes);
