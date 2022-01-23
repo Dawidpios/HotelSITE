@@ -190,6 +190,7 @@ const DivMain = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 2px -2px 24px 7px rgba(92, 145, 210, 1);
  @media(min-width:990px){
    width:80%;
  }
