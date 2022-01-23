@@ -106,7 +106,7 @@ flex-shrink:1;
 
 const DivImgRoom = styled.div`
 width:100%;
-height:25rem;
+height:30rem;
 padding:2rem;
 
 
@@ -121,7 +121,7 @@ transition:.4s;
 `
 const DivImgView = styled.div`
 width:100%;
-height:25rem;
+height:30rem;
 padding:2rem;
 
 

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { AppContext } from "../context/AppContext";
 
 import videoLogo from "../images/logoVideo.mp4";
+
 import LoginBackground from "../images/login.jpg"
 
 const LogoSec = () => {
@@ -15,7 +16,8 @@ const LogoSec = () => {
     <LogoSection>
     <Logo>
       <Video  autoPlay loop muted src={videoLogo} alt="videoLogo"></Video>
-      <H1Header>Hotel Caravaggio</H1Header>
+      
+      <H1Header>Hotel Caravaggio <br/> &#9734; &#9734; &#9734; &#9734; &#9734;</H1Header>
     </Logo>
     {!UserLoginCheck ? <UserLogin> 
       <FormLogin >
@@ -62,11 +64,6 @@ const Video = styled.video`
 width:100%;
 height: 100%;
 align-self:flex-start;
-
-
-
-
-
 `
 
 
