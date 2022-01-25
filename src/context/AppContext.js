@@ -55,7 +55,7 @@ const AppProvider = ({ children }) => {
         
         switch (e.value) {
           case "Pokój jednoosobowy": {
-            if(logCheck){
+            if(logCheck && from.value && Until.value){
             if (oneRoom > 0) {
               setOneRoom(oneRoom - 1);
             } else {
@@ -66,7 +66,7 @@ const AppProvider = ({ children }) => {
             break;
           }
           case "Pokój dwuosobowy": {
-            if(logCheck){
+            if(logCheck && from.value && Until.value){
             if (twoPersonRoom > 0) {
               setTwoPersonRoom(twoPersonRoom - 1);
             } else {
@@ -77,7 +77,7 @@ const AppProvider = ({ children }) => {
             break;
           }
           case "Pokój trzyosobowy": {
-            if(logCheck){
+            if(logCheck && from.value && Until.value){
             if (threePersonRoom > 0 ) {
               setThreePersonRoom(threePersonRoom - 1);
             } else {

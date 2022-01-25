@@ -43,10 +43,10 @@ export default LogoSec;
 
 const LogoSection = styled.section`
 width:100%;
-height: 100vh;
+height: 70vh;
 display: flex;
 flex-direction:column;
-@media(min-width:990px){
+@media(min-width:600px){
   height: auto;
   width:100%;
 }
@@ -57,7 +57,7 @@ const Logo = styled.div`
 width:100%;
 height:100%;
 position:relative;
-top:-27%;
+top:-20%;
 
 
 `

@@ -21,7 +21,7 @@ const Main = () => {
   const [guests, setGuests] = useState(0);
   const [reservation, setReservation] = useState(0);
 
-  const [type, setType] = useState(0);
+  const [type, setType] = useState(1);
 
   const handleMainButton = (e) => {
     if (e.target.getAttribute("id")) {

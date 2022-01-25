@@ -55,20 +55,21 @@ const MainSection = styled.section`
   height: auto;
   position: relative;
   display: block;
-  transform: translateY(0%);
+  transform: translateY(-5%);
   color: black;
  
-  @media(min-width:990px){
-    transform: translateY(0%);
+  @media(min-width:600px){
+    transform: translateY(10%);
   }
 
 `;
 
 const FooterSection = styled.section`
   width: 100vw;
-  height: 70vh;
+  height: auto;
   background: black;
   color: white;
   background:linear-gradient(to right bottom, rgba(255,255,255, .4), rgba(255,255,255, .7)) ,url(${FooterBackground});
-background-size:cover;
+  background-size:cover;
+  background-position:center;
 `;

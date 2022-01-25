@@ -57,7 +57,7 @@ margin-top:20%;
 `
 
 const RoomSection = styled.section`
-width:80%;
+width:100%;
 
 display: flex;
 flex-direction:column;
@@ -82,7 +82,7 @@ width:25%;
 
 
 const ViewSection = styled.section`
-width:80%;
+width:100%;
 
 display: flex;
 flex-direction:column;

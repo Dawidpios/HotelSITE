@@ -146,7 +146,7 @@ const ReservationSection = styled.section`
     font-size:2.5rem;
   }
   &>p{
-    font-size:1.6rem;
+    font-size:2rem;
     font-weight:700;
   }
 `;

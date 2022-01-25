@@ -72,7 +72,7 @@ const Nav = styled.nav`
   height: 10%;
   flex-basis: auto;
   z-index: 3;
-  background-color: rgba(255,255,255,.9);
+  background-color: rgba(255,255,255,1);
   border-bottom:.05rem solid black;
   font-weight:700;
 
@@ -130,6 +130,7 @@ const LiLogin = styled.li`
       cursor:pointer;
     }
     &>a{
+      color:black;
       font-size:1.8rem;
       text-decoration:none;
       &:visited{

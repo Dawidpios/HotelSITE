@@ -1,28 +1,47 @@
-import React, {useState, useContext} from "react";
+import React, { useState, useContext } from "react";
 import { AppContext } from "../context/AppContext";
 import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
-import BackGround from "../images/MyProfilBackground.jpg"
+import BackGround from "../images/MyProfilBackground.jpg";
 
 const MyProfil = () => {
   const [DisplayRes, setDisplayRes] = useState(true);
-  const {userLogOut, userLogin} = useContext(AppContext);
-
+  const { userLogOut, userLogin } = useContext(AppContext);
+  let AllRes = localStorage.getItem("AllRes");
+  AllRes = JSON.parse(AllRes);
+  let OldRes;
   let res = localStorage.getItem("Tablica");
   res = JSON.parse(res);
   let Acc = localStorage.getItem("Acc");
   Acc = JSON.parse(Acc);
 
-  
+  if (res) {
+    OldRes = localStorage.getItem("OldRes");
+    OldRes = JSON.parse(OldRes);
+    AllRes = [...res];
 
-  const handleDisplayRes =()=>{
+    if (OldRes) {
+      res = [...res, ...OldRes];
+      res = new Set(res);
+      res = [...res];
+
+      AllRes = [];
+      AllRes = [...res];
+      localStorage.setItem("AllRes", JSON.stringify(AllRes));
+    }
+  }
+
+  const handleDisplayRes = () => {
     setDisplayRes(!DisplayRes);
-  }
-  const handleBackToMainSite=()=>{
-    localStorage.setItem('UserLogged', userLogin)
-  }
+  };
+  const handleBackToMainSite = () => {
+    localStorage.setItem("UserLogged", userLogin);
+    if (AllRes) {
+      localStorage.setItem("OldRes", JSON.stringify(AllRes));
+    }
+  };
   const User = Acc.map((e, i) => {
     let user;
     if (e.logged) {
@@ -30,7 +49,9 @@ const MyProfil = () => {
         <UlUser key={i}>
           <LiUser>{e.name}</LiUser>
           <LiUser>{e.lastName}</LiUser>
-          <LiUser onClick={handleDisplayRes} style={{cursor: "pointer"}}>Rezerwacje</LiUser>
+          <LiUser onClick={handleDisplayRes} style={{ cursor: "pointer" }}>
+            Rezerwacje
+          </LiUser>
         </UlUser>
       );
     }
@@ -38,32 +59,38 @@ const MyProfil = () => {
     return user;
   });
 
-      
-     
-
-
-  const handleDeleteLi=(e)=>{
-    if(e.target.classList.contains('liDel')){
-      let index = e.target.dataset.key
+  const handleDeleteLi = (e) => {
+    if (e.target.classList.contains("liDel")) {
+      let index = e.target.dataset.key;
       document.querySelector(`li[data-key="${index}"]`).remove();
-      res.splice(index,1)
-      localStorage.removeItem('Tablica');
-      localStorage.setItem('Tablica', JSON.stringify(res));
-      res = localStorage.getItem('Tablica')
-      res = JSON.parse(res);
-     
-     
 
-      
-     }
-     
-  }
-  
-  const PickReservation = res?.map((e,i)=>{
-    return <LiRes data-key={i} key={i}>{[e]}<ButtonDelete className="liDel" data-key={i}>Usuń</ButtonDelete> </LiRes>;
- 
-  })
-       
+      AllRes.splice(index, 1);
+
+      localStorage.setItem("AllRes", JSON.stringify(AllRes));
+      AllRes = localStorage.getItem("AllRes");
+      AllRes = JSON.parse(AllRes);
+
+      AllRes = [...AllRes];
+      console.log(AllRes);
+      localStorage.removeItem("OldRes");
+      localStorage.removeItem("Tablica");
+
+      console.log(OldRes);
+      console.log(res);
+      return AllRes;
+    }
+  };
+  console.log(AllRes);
+  const PickReservation = AllRes?.map((e, i) => {
+    return (
+      <LiRes data-key={i} key={i}>
+        {[e]}
+        <ButtonDelete className="liDel" data-key={i}>
+          Usuń
+        </ButtonDelete>{" "}
+      </LiRes>
+    );
+  });
 
   return (
     <MyProfilSection>
@@ -72,34 +99,45 @@ const MyProfil = () => {
           <Link onClick={userLogOut} to="/HotelSITE" className="LINK">
             Wyloguj
           </Link>
-          <Link onClick={handleBackToMainSite} to="/HotelSITE/" className="LINK">
+          <Link
+            onClick={handleBackToMainSite}
+            to="/HotelSITE/"
+            className="LINK"
+          >
             Powrót do strony głównej
           </Link>
         </DivExit>
         {User}
       </UserSection>
-     {DisplayRes && <ResSection className="sectionRes">
-        <H3>Rezerwacje użytkownika</H3>
-        <UlRezerwacja onClick={handleDeleteLi}>{PickReservation}</UlRezerwacja>
-      </ResSection>}
+      {DisplayRes && (
+        <ResSection className="sectionRes">
+          <H3>Rezerwacje użytkownika</H3>
+          <UlRezerwacja onClick={handleDeleteLi}>
+            {PickReservation}
+          </UlRezerwacja>
+        </ResSection>
+      )}
     </MyProfilSection>
   );
 };
 
 export default MyProfil;
 const MyProfilSection = styled.section`
-width:100vw;
-height:100vh;
-background:linear-gradient(to right bottom, rgba(255,255,255, .7), rgba(255,255,255, .7)) , url(${BackGround});
-background-size:cover;
-
-
-`
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(${BackGround});
+  background-size: cover;
+`;
 const UserSection = styled.section`
-display:flex;
-width:40%;
-
-`
+  display: flex;
+  width: 40%;
+  font-weight: 700;
+`;
 
 const DivExit = styled.div`
   position: absolute;
@@ -107,18 +145,18 @@ const DivExit = styled.div`
   margin: 2.5rem;
   color: yellow;
   z-index: 3;
-  width:30%;
- 
-  display:flex;
-  flex-direction:column-reverse;
-  align-items:space-around;
+  width: 30%;
+
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: space-around;
   .LINK {
-    color:black;
+    color: black;
     text-decoration: none;
     font-size: 2.4rem;
-    margin-bottom:2rem;
-    &:visited{
-      color:black;
+    margin-bottom: 2rem;
+    &:visited {
+      color: black;
     }
   }
 `;
@@ -130,7 +168,7 @@ const UlUser = styled.ul`
   width: 60%;
   height: 10%;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: flex-start; ;
 `;
 
@@ -145,9 +183,8 @@ const ResSection = styled.section`
   top: 30%;
   left: 0;
   width: 65%;
-  font-size:3.5rem;
-  height:70%;
-
+  font-size: 3.5rem;
+  height: 70%;
 `;
 
 const H3 = styled.h3`
@@ -160,12 +197,10 @@ const UlRezerwacja = styled.ul`
   height: 70%;
   width: 100%;
   list-style: none;
-
 `;
 const LiRes = styled.li`
   margin-top: 5%;
   font-size: 2rem;
-
 `;
 const ButtonDelete = styled.button`
  margin-left:2rem;
@@ -188,4 +223,3 @@ cursor: pointer;
 }
 
 `;
-
