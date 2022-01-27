@@ -53,11 +53,11 @@ const SectionFooter = styled.section`
 width:100%;
 height:100%;
 display:flex;
-flex-direction:column;
+flex-direction:row;
 justify-content: flex-start;
 align-items:flex-start;
-
-color:black;
+text-transform:uppercase;
+color:#623889;
 font-weight:700;
 
 `
@@ -94,13 +94,13 @@ width:100%;
 
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items: center;
 list-style:none;
 font-size:18px;
 letter-spacing:1.5px;
-/* margin-top:30px; */
+margin-top:30px;
 font-size:3rem;
+
 @media(min-width:600px){
     font-size:3rem;
   }
@@ -111,7 +111,8 @@ padding:1.5rem;
 display:flex;
 flex-direction:row;
 width:100%;
-justify-content:center;`
+justify-content:center;
+`
 
 const FooterLi = styled.li`
 margin-top:5px;

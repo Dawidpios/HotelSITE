@@ -95,7 +95,7 @@ const Booking = () => {
             </RoomCounterParagraph>
           </RoomCounter>
           
-          <Button onClick={handleButtonForm} variant="contained" endIcon={<SendIcon />}>
+          <Button onClick={handleButtonForm} variant="contained" endIcon={<SendIcon />} color="secondary">
   Rezerwuj
 </Button>
         </ButtonSection>
@@ -115,13 +115,14 @@ const BookingSection = styled.section`
   justify-content: center;
   align-items: center;
   margin-bottom:35%;
-
+  color:#A836EF;
 
 `;
-const H1Booking = styled.h1`
-  font-size: 3.5rem;
+const H1Booking = styled.p`
+  font-size: 4rem;
   margin: 10%;
   text-align: center;
+  font-family: 'Pacifico', cursive;
 `;
 
 const FormBooking = styled.form`
@@ -152,9 +153,16 @@ const ReservationSection = styled.section`
 `;
 
 const ReservationLabel = styled.label`
-  margin: 1rem;
+  font-weight:700;
+  margin: .2rem;
   &>input{
+    color:#A836EF;
+    text-align:center;
+    font-size:1rem;
+    font-weight:700;
     margin:1rem;
+    border:.2rem solid #623889;
+   
   }
 `;
 
@@ -164,7 +172,7 @@ const RoomsSection = styled.section`
   flex-direction: column;
   
   align-items: center;
-  
+ 
 
 `;
 
@@ -176,6 +184,9 @@ const RoomsSectionLabel = styled.label`
   width: 80%;
   margin: 2.5rem;
   padding:2rem;
+  border:2px solid #A836EF;
+  box-shadow: .1rem -.1rem 1rem .2rem #A836EF;
+  
   @media(min-width:990px){
     flex-direction:row;
     width:80%;
@@ -200,23 +211,28 @@ const RoomsSectionImg = styled.img`
 
 const RoomsSectionUl = styled.ul`
   display: flex;
-  flex-direction: row;
-  justify-content:center;
-  align-items:center;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items:flex-start;
   width: 100%;
+  height:auto;
   list-style:none;
   flex-wrap: wrap;
   text-align:justify;
   font-weight:700;
+  margin-bottom:2rem;
+  color:#A836EF;
   @media(min-width:600px){
     width:70%;
-    text-align:justify;
+
     align-self:center;
   }
   @media(min-width:990px){
-    width:70%;
-    text-align:justify;
-    align-self:flex-start;
+    flex-direction: row;
+    width:80%;
+    
+    
+  
   }
 `;
 const RoomsSectionLi = styled.li`
@@ -258,7 +274,7 @@ const RoomCounterParagraph = styled.p`
 
 const InputCheckbox = styled.input`
 position:absolute;
-right:0;
+right:5%;
 bottom:0;
 width:5%;
 height: 5%;

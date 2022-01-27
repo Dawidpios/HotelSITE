@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
-import BackGround from "../images/MyProfilBackground.jpg";
+import BackGround from "../images/MyProfilBackground.png";
 
 const MyProfil = () => {
   const [DisplayRes, setDisplayRes] = useState(true);
@@ -137,26 +137,25 @@ const UserSection = styled.section`
   display: flex;
   width: 40%;
   font-weight: 700;
+  color:#A836EF;
 `;
 
 const DivExit = styled.div`
   position: absolute;
   right: 0;
   margin: 2.5rem;
-  color: yellow;
   z-index: 3;
   width: 30%;
-
   display: flex;
   flex-direction: column-reverse;
   align-items: space-around;
   .LINK {
-    color: black;
+    color: #A836EF;
     text-decoration: none;
     font-size: 2.4rem;
     margin-bottom: 2rem;
     &:visited {
-      color: black;
+      color: #A836EF;
     }
   }
 `;
@@ -190,17 +189,21 @@ const ResSection = styled.section`
 const H3 = styled.h3`
   text-align: justify;
   margin-left: 10%;
+  color:#A836EF;
 `;
 const UlRezerwacja = styled.ul`
   position: relative;
   margin: 5% 0 0 10%;
   height: 70%;
-  width: 100%;
+  width: 60%;
   list-style: none;
 `;
 const LiRes = styled.li`
-  margin-top: 5%;
   font-size: 2rem;
+  color:#623889;
+  font-weight:700;
+  border:1px solid #623889;
+  background:linear-gradient(to right bottom, rgba(255,255,255,.7), rgba(255,255,255,.7));
 `;
 const ButtonDelete = styled.button`
  margin-left:2rem;

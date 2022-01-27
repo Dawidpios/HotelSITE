@@ -17,7 +17,7 @@ const Opinion = () => {
     },
     {
       id: 2,
-      text: "There is an amazing intimate sky bar st Opinion Hotel. Ypu can see cires of the parliament and the Holy Trinity church which looks beautiful at night. The have nice wines, gin and tonic, and we also sampled a cheese board which was quite good. Staff were helpful and kind. I'd recommend the roof terrace for a quiet evening. There was also a live violinist",
+      text: "There is an amazing intimate sky bar st Opinion Hotel. You can see cires of the parliament and the Holy Trinity church which looks beautiful at night. The have nice wines, gin and tonic, and we also sampled a cheese board which was quite good. Staff were helpful and kind. I'd recommend the roof terrace for a quiet evening. There was also a live violinist",
     },
     {
       id: 3,
@@ -78,6 +78,7 @@ const UserInfoName = styled.h4`
   text-align: center;
   font-size: 1.9rem;
   margin: 1rem;
+  color:#623889;
   @media(min-width:600px){
     font-size:1.6rem;
   }
@@ -89,6 +90,7 @@ const UserInfoCity = styled.h5`
   text-align: center;
   font-size: 1.9rem;
   margin: 1rem;
+  color:#623889;
   @media(min-width:600px){
     font-size:1.4rem;
   }
@@ -99,6 +101,7 @@ const UserParagraph = styled.p`
   margin: .5rem;
   text-align: justify;
   font-size:1.2rem;
+  color:#A836EF;
   @media (min-width:600px){
     width:60%;
     font-size:1.2rem;

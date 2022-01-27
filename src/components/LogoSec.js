@@ -46,7 +46,7 @@ width:100%;
 height: 70vh;
 display: flex;
 flex-direction:column;
-@media(min-width:600px){
+@media(min-width:520px){
   height: auto;
   width:100%;
 }
@@ -154,12 +154,13 @@ text-transform:uppercase;
 
 `
 
-const H1Header  = styled.h1`
+const H1Header  = styled.p`
 z-index:2;
 text-align:center;
 font-size:3.5rem;
-color:white;
+color:#E7D8EA;
 position:absolute;
 top:50%;
 left:50%;
-transform:translate(-50%,-50%);`
+transform:translate(-50%,-50%);
+font-family: 'Pacifico', cursive;`

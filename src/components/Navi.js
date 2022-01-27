@@ -75,6 +75,7 @@ const Nav = styled.nav`
   background-color: rgba(255,255,255,1);
   border-bottom:.05rem solid black;
   font-weight:700;
+  color:#A836EF;
 
 `;
 const Ul = styled.ul`
@@ -89,6 +90,7 @@ const Ul = styled.ul`
  
 `;
 const Ulmobile = styled.ul`
+
  width: 100%;
   height: 100%;
   display: flex;
@@ -130,11 +132,11 @@ const LiLogin = styled.li`
       cursor:pointer;
     }
     &>a{
-      color:black;
+      color:#A836EF;
       font-size:1.8rem;
       text-decoration:none;
       &:visited{
-        color:black;
+        color:#A836EF;
         
       }
     }

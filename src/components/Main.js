@@ -82,11 +82,9 @@ const Main = () => {
         className="DivButtonContainer"
         onClick={handleMainButton}
       > 
-        <Button variant="contained" size="large" id="1" >Informacje</Button>
-        <Button variant="contained" size="large" id="2" >Statystyki</Button>
-        <Button variant="contained" size="large" id="3" >
-          Opinie
-        </Button>
+        <Button variant="contained" size="large" id="1" color="secondary">Informacje</Button>
+        <Button variant="contained" size="large" id="2"  color="secondary">Statystyki</Button>
+        <Button variant="contained" size="large" id="3"  color="secondary">Opinie</Button>
     
       </DivButtonContainer>
       <DivMain className="DivMain">
@@ -110,9 +108,9 @@ const Main = () => {
                 value={percentageFirstBar}
                 text={`${percentageFirstBar}%`}
                 styles={buildStyles({
-                  textColor: "black",
+                  textColor: "#623889",
                   pathColor: "green",
-                  trailColor: "grey",
+                  trailColor: "#E7D8EA",
                   strokeLinecap: "butt"
                 })}
                 strokeWidth={5}
@@ -126,9 +124,9 @@ const Main = () => {
                 value={percentageSecondBar}
                 text={`${percentageSecondBar}%`}
                 styles={buildStyles({
-                  textColor: "black",
+                  textColor: "#490E81",
                   pathColor: "orange",
-                  trailColor: "grey",
+                  trailColor: "#E7D8EA",
                   strokeLinecap: "butt"
                 })}
                 strokeWidth={5}
@@ -140,9 +138,9 @@ const Main = () => {
                 value={percentageThirdBar}
                 text={`${percentageThirdBar}%`}
                 styles={buildStyles({
-                  textColor: "black",
+                  textColor: "#490E81",
                   pathColor: "green",
-                  trailColor: "grey",
+                  trailColor: "#E7D8EA",
                   strokeLinecap: "butt"
                 })}
                 strokeWidth={5}
@@ -172,16 +170,23 @@ const Main = () => {
 
 export default Main;
 
-const H2Main = styled.h2`
+
+
+const H2Main = styled.p`
   margin-top: 8rem;
-  font-size: 2.5rem;
+  font-size: 4rem;
   text-align: center;
+  color:#A836EF;
+  letter-spacing:1rem;
+  font-family: 'Pacifico', cursive;
+
+
 `;
 
 const DivMain = styled.div`
   width: 80%;
   height: auto;
-  border: .1rem solid black;
+  border: .1rem solid #490E81;
   border-radius:.5rem;
   position: relative;
   left: 50%;
@@ -190,7 +195,8 @@ const DivMain = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px -2px 24px 7px rgba(92, 145, 210, 1);
+  box-shadow: .1rem -.1rem 1rem .2rem #A836EF;
+  
  @media(min-width:990px){
    width:80%;
  }
@@ -224,6 +230,8 @@ const ParagraphMain = styled.p`
   padding: .2rem;
   letter-spacing:.15rem;
   font-size:1.2rem;
+  color:#A836EF;
+  font-weight:700;
   @media(min-width:600px){
     font-size:1.4rem;
   }
@@ -262,6 +270,7 @@ const DivBarParagraph = styled.section`
   width: 55%;
   height: 30%;
   font-size:2.5rem;
+  color: #A836EF;
   @media(min-width:600px){
     font-size:2.4rem;
     width: 25%;
@@ -277,6 +286,8 @@ const ParagraphBarPercentage = styled.p`
   text-align: center;
   margin-top: 10%;
   font-size:1.5rem;
+  color:#A836EF;
+  font-weight:700;
   @media (min-width:600px){
   transform:translateX(-5%);
   width:120%;

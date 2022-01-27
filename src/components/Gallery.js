@@ -46,7 +46,7 @@ flex-direction:column;
 flex-wrap:wrap;
 justify-content: center;
 align-items:center;
-margin-bottom:15%;
+margin-bottom:25%;
 margin-top:20%;
 @media(min-width:600px){
     flex-direction:row;
