@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/HotelSITE/static/css/main.7290247c.css",
-    "main.js": "/HotelSITE/static/js/main.125ed480.js",
+    "main.css": "/HotelSITE/static/css/main.5a99a39f.css",
+    "main.js": "/HotelSITE/static/js/main.1af2e992.js",
     "static/media/logoVideo.mp4": "/HotelSITE/static/media/logoVideo.c7252f52ab501c3b38db.mp4",
+    "static/media/footerBackground.png": "/HotelSITE/static/media/footerBackground.2ebd4cc0f6b913bb08bf.png",
+    "static/media/MyProfilBackground.png": "/HotelSITE/static/media/MyProfilBackground.ad883774eedfcecd605a.png",
     "static/media/roomReservation1.jpg": "/HotelSITE/static/media/roomReservation1.f1cfe78a49539266f880.jpg",
     "static/media/login.jpg": "/HotelSITE/static/media/login.637db15c6104eeb6831e.jpg",
     "static/media/hotelView2.jpg": "/HotelSITE/static/media/hotelView2.892e7e51e0798f4ce8b7.jpg",
     "static/media/hotelRoom1.jpg": "/HotelSITE/static/media/hotelRoom1.d546363faae4133f5d89.jpg",
-    "static/media/footerBackground.jpg": "/HotelSITE/static/media/footerBackground.2f865e9d21a90098a71a.jpg",
     "static/media/hotelView4.jpg": "/HotelSITE/static/media/hotelView4.bae583bb394cb47373f1.jpg",
     "static/media/hotelRoom3.jpg": "/HotelSITE/static/media/hotelRoom3.964644dac2b76a952043.jpg",
-    "static/media/MyProfilBackground.jpg": "/HotelSITE/static/media/MyProfilBackground.b879fd104edb97b86a6d.jpg",
     "static/media/hotelView1.jpg": "/HotelSITE/static/media/hotelView1.98429482fa95c4866b3a.jpg",
     "static/media/roomReservation3.jpg": "/HotelSITE/static/media/roomReservation3.32ad72fe4f7f3cc0a20e.jpg",
     "static/media/hotelRoom2.jpg": "/HotelSITE/static/media/hotelRoom2.2b0d234310a24f3b7aea.jpg",
@@ -19,11 +19,11 @@
     "static/media/hotelRoom4.jpg": "/HotelSITE/static/media/hotelRoom4.1e9702702c18ecf9283e.jpg",
     "static/media/about.png": "/HotelSITE/static/media/about.f5e8d73a98d5c42ba4a6.png",
     "index.html": "/HotelSITE/index.html",
-    "main.7290247c.css.map": "/HotelSITE/static/css/main.7290247c.css.map",
-    "main.125ed480.js.map": "/HotelSITE/static/js/main.125ed480.js.map"
+    "main.5a99a39f.css.map": "/HotelSITE/static/css/main.5a99a39f.css.map",
+    "main.1af2e992.js.map": "/HotelSITE/static/js/main.1af2e992.js.map"
   },
   "entrypoints": [
-    "static/css/main.7290247c.css",
-    "static/js/main.125ed480.js"
+    "static/css/main.5a99a39f.css",
+    "static/js/main.1af2e992.js"
   ]
 }
