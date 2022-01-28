@@ -5,7 +5,9 @@ import { AppContext } from "../context/AppContext";
 
 import videoLogo from "../images/logoVideo.mp4";
 
-import LoginBackground from "../images/login.jpg"
+import LoginBackground from "../images/login.png"
+
+
 
 
 const LogoSec = () => {
@@ -84,18 +86,16 @@ background-size:cover;
 z-index:7;
 font-weight:700;
 font-size:1.8rem;
+
 @media(min-width:600px){
-  width:50%;
+  width:40%;
   font-size:2rem;
   
 }
 @media(min-width:990px){
-  width:40%;
-}
-@media(min-width:1200px){
   width:30%;
-  
 }
+
 `
 
 
@@ -113,15 +113,18 @@ const Input = styled.input`
 padding:.5rem;
 margin:2rem;
 border:none;
-border-bottom:.1rem solid black;
-background-color:transparent;
+background-color:#E7D8EA;
 text-align:center;
-width:40%;
 font-size:1.4rem;
+
 &::placeholder {
   width:100%;
   font-size:1rem;
-    color: black;
+    color: #A836EF;
+    @media(min-width:600px){
+  font-size:1.2rem;
+  
+}
     @media(min-width:1200px){
   font-size:1.5rem;
   
@@ -131,6 +134,12 @@ font-size:1.4rem;
         outline: none;
         box-shadow: none;
     }
+@media(min-width:220px){
+  width:60%;
+}
+@media(min-width:320px){
+  width:50%;
+}
 @media(min-width:600px){
   font-size:1.6rem;
 }
@@ -147,20 +156,26 @@ border:.1rem solid black;
 text-align:center;
 width:40%;
 border:.2rem solid;
-background: linear-gradient(to right bottom, rgba(255,255,255, .5),rgba(255,255,255, .5));
+background: linear-gradient(to right bottom, rgba(255,255,255, .8),rgba(255,255,255, .8));
 font-size:1.2rem;
 text-transform:uppercase;
-/* font-weight:700; */
+
 
 `
 
 const H1Header  = styled.p`
 z-index:2;
 text-align:center;
-font-size:3.5rem;
+font-size:3rem;
 color:#E7D8EA;
 position:absolute;
 top:50%;
 left:50%;
 transform:translate(-50%,-50%);
-font-family: 'Pacifico', cursive;`
+font-family: 'Pacifico', cursive;
+@media(max-width:320px){
+  font-size:2.5rem;
+}
+@media(min-width:600px){
+  font-size:3.5rem;
+}`

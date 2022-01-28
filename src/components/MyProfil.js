@@ -202,27 +202,32 @@ const LiRes = styled.li`
   font-size: 2rem;
   color:#623889;
   font-weight:700;
-  border:1px solid #623889;
-  background:linear-gradient(to right bottom, rgba(255,255,255,.7), rgba(255,255,255,.7));
+  padding:.5rem;
 `;
 const ButtonDelete = styled.button`
- margin-left:2rem;
- display:inline-block;
- padding:0.35rem 1.2rem;
- border:.1rem solid #black;
- border-radius:0.12rem;
- text-decoration:none;
- font-weight:700;
- color:black;
- text-align:center;
- transition: all 0.2s;
- background: white;
+  width: 10%;
+	height: 5%;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	color: #A836EF;
+	background: white;
+	border: 2px solid #623889;
+	box-shadow: 5px 5px 0 #623889,
+		-5px -5px 0 #623889,
+		-5px 5px 0 #623889,
+		5px -5px 0 #623889;
+	transition: 500ms ease-in-out;
+  margin:2.5rem;
 }
 &:hover{
- color:white;
- background-color:black;
+  color:white;
+  background: #A836EF;
+	box-shadow: 20px 5px 0 #623889, -20px -5px 0 #623889;
 cursor: pointer;
-
+}
+&:focus {
+	outline: none;
 }
 
 `;

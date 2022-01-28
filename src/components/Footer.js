@@ -14,7 +14,7 @@ const Foooter = () => {
 
             }
             else if(e.target.id==="Kontakt"){
-                setValue(`Numer telefonu          534-237-211 \n e-mail: HotelCaravaggio@.gmial.com`);
+                setValue(`E-mail: HotelCaravaggio@.gmial.com`);
             }
             else if(e.target.id==="Adres"){
                 setValue(`U.S. -\n Stany Zjednoczone  
@@ -24,14 +24,14 @@ const Foooter = () => {
     }
 
     return ( <SectionFooter>
-    <DivFooter>
+    <DivFooterMenu>
         <DivFooterUl className='DivFooterUl' onClick={handleFooterValue}>
             <FooterLi id="FAQ">FAQ</FooterLi>
             <FooterLi id="Kontakt">Kontakt</FooterLi>
             <FooterLi id="Adres">Adres</FooterLi>
         </DivFooterUl>
         <DivFooterParagraph>{value}</DivFooterParagraph>
-    </DivFooter>
+    </DivFooterMenu>
 
     <DivFooter>
         <DivFooterMe>
@@ -53,7 +53,7 @@ const SectionFooter = styled.section`
 width:100%;
 height:100%;
 display:flex;
-flex-direction:row;
+flex-direction:column;
 justify-content: flex-start;
 align-items:flex-start;
 text-transform:uppercase;
@@ -63,25 +63,36 @@ font-weight:700;
 `
 const DivFooter = styled.div`
 width:100%;
-height: 45%;
+height: 30%;
 display:flex;
 flex-direction:column;
 justify-content: flex-start;
 align-items:center;
-flex-basis:45%;
 
+
+
+
+`
+const DivFooterMenu = styled.div`
+width:100%;
+height: 70%;
+display:flex;
+flex-direction:column;
+justify-content: flex-start;
+align-items:center;
+flex-basis:70%;
+flex-grow:1;
 
 
 `
 const DivFooterUl = styled.ul`
 width:100%;
-height:35%;
+height:80%;
 display:flex;
 flex-direction:row;
 justify-content:center;
 align-items: flex-start;
 list-style:none;
-flex-basis:40%;
 font-size:3.5rem;
 @media(min-width:600px){
     font-size:2.5rem;
@@ -91,15 +102,14 @@ font-size:3.5rem;
 `
 const DivFooterMe = styled.ul`
 width:100%;
-
+height: 30%;
 display:flex;
 flex-direction:column;
 align-items: center;
 list-style:none;
-font-size:18px;
-letter-spacing:1.5px;
-margin-top:30px;
-font-size:3rem;
+letter-spacing:.15rem;
+margin-top:3rem;
+font-size:2rem;
 
 @media(min-width:600px){
     font-size:3rem;
@@ -115,17 +125,20 @@ justify-content:center;
 `
 
 const FooterLi = styled.li`
-margin-top:5px;
-padding:5px;
+
+padding:.5rem;
+height:100%;
 
 &:hover{
     cursor:pointer;
 }
 `
 const DivFooterParagraph = styled.p`
-width:100%;
+
 text-align:center;
-font-size:18px;
+font-size:.9rem;
+
+
 `
 
 const LinkIcon = styled.a`

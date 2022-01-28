@@ -66,10 +66,8 @@ const MainSection = styled.section`
 `;
 
 const FooterSection = styled.section`
-  width: 100vw;
-  height: auto;
-  background: black;
-  color: white;
+  width: 100%;
+  height: 100%;
   background:linear-gradient(to right bottom, rgba(255,255,255, .3), rgba(255,255,255, .9)) ,url(${FooterBackground});
   background-size:cover;
   background-position:center;

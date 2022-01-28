@@ -267,6 +267,7 @@ const RoomCounter = styled.div`
 const RoomCounterParagraph = styled.p`
   font-size:1.8rem;
   margin-top: 1rem;
+  text-align:center;
   @media(min-width:600px){
     font-size:2rem;
   }
@@ -275,15 +276,31 @@ const RoomCounterParagraph = styled.p`
 const InputCheckbox = styled.input`
 position:absolute;
 right:5%;
-bottom:0;
-width:5%;
-height: 5%;
-
-@media(min-width:600px){
- 
-width:5%;
-height: 5%;
+bottom:2%;
+width:1.5rem;
+height: 1.5rem;
+border:none;
+z-index:-1;
+&:after {
+    transform: translateX(-50%);
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 1.5rem;
+    width: 1.5rem;
+    border:.3rem solid #A836EF;
+    border-radius:25px;
+    background:white;
+  }
+&:checked{
+  &:after{
+    background:#A836EF;
+    content: "";
+  }
 }
+
 
 
 `;
