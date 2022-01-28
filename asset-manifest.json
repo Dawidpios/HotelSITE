@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/HotelSITE/static/css/main.5a99a39f.css",
-    "main.js": "/HotelSITE/static/js/main.1af2e992.js",
+    "main.js": "/HotelSITE/static/js/main.3fb669c0.js",
     "static/media/logoVideo.mp4": "/HotelSITE/static/media/logoVideo.c7252f52ab501c3b38db.mp4",
     "static/media/footerBackground.png": "/HotelSITE/static/media/footerBackground.2ebd4cc0f6b913bb08bf.png",
     "static/media/MyProfilBackground.png": "/HotelSITE/static/media/MyProfilBackground.ad883774eedfcecd605a.png",
+    "static/media/login.png": "/HotelSITE/static/media/login.66a61c495eecac022b88.png",
     "static/media/roomReservation1.jpg": "/HotelSITE/static/media/roomReservation1.f1cfe78a49539266f880.jpg",
-    "static/media/login.jpg": "/HotelSITE/static/media/login.637db15c6104eeb6831e.jpg",
     "static/media/hotelView2.jpg": "/HotelSITE/static/media/hotelView2.892e7e51e0798f4ce8b7.jpg",
     "static/media/hotelRoom1.jpg": "/HotelSITE/static/media/hotelRoom1.d546363faae4133f5d89.jpg",
     "static/media/hotelView4.jpg": "/HotelSITE/static/media/hotelView4.bae583bb394cb47373f1.jpg",
@@ -20,10 +20,10 @@
     "static/media/about.png": "/HotelSITE/static/media/about.f5e8d73a98d5c42ba4a6.png",
     "index.html": "/HotelSITE/index.html",
     "main.5a99a39f.css.map": "/HotelSITE/static/css/main.5a99a39f.css.map",
-    "main.1af2e992.js.map": "/HotelSITE/static/js/main.1af2e992.js.map"
+    "main.3fb669c0.js.map": "/HotelSITE/static/js/main.3fb669c0.js.map"
   },
   "entrypoints": [
     "static/css/main.5a99a39f.css",
-    "static/js/main.1af2e992.js"
+    "static/js/main.3fb669c0.js"
   ]
 }
